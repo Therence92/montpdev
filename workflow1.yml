@@ -1,0 +1,14 @@
+name: Workflow1
+
+on:
+  schedule:
+    # Exécute le workflow tous les jours à minuit
+    - cron: '0 0 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      # Ajoutez les étapes supplémentaires ici
